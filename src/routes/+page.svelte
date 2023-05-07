@@ -14,10 +14,19 @@
         const socket = new WebSocket("wss://sbdd-year-pub-23.fly.dev")
         socket.addEventListener("open", () => {
             console.log("Opened")
+            messages = ["WS Opened", ...messages]
         })
         socket.addEventListener("message", (event) => {
             console.log("Message", event.data)
-            messages = [...messages, event.data]
+            messages = [event.data, ...messages]
         })
+        socket.addEventListener("error", (event) => {
+            console.log("WebSocket error: ", event);
+            messages = ["WebSocket error:", event, ...messages]
+        });
+        socket.addEventListener("close", (event) => {
+            console.log("The connection has been closed successfully.");
+            messages = ["CLOSED", event, ...messages]
+        });
     }
 </script>
