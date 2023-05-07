@@ -1,4 +1,4 @@
-<h1>WS Client</h1>
+<h1>SBDD Websocket Client</h1>
 
 {#each messages as message}
     <p>{message}</p>
