@@ -22,11 +22,11 @@
         })
         socket.addEventListener("error", (event) => {
             console.log("WebSocket error: ", event);
-            messages = ["WebSocket error:", event, ...messages]
+            messages = ["WebSocket error:", JSON.stringify(event), ...messages]
         });
         socket.addEventListener("close", (event) => {
             console.log("The connection has been closed successfully.");
-            messages = ["CLOSED", event, ...messages]
+            messages = ["CLOSED", JSON.stringify(event), ...messages]
         });
     }
 </script>
