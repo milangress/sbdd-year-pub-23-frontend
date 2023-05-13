@@ -1,15 +1,15 @@
-<p style="color: rebeccapurple" class="{classType}">{contentString}</p>
+<p class="{classType}">{contentString}</p>
 
 <script>
     export let content = 'NO CONTENT :((('
     //console.log(content)
     $: contentString = content.message
-    $: classType = getClassType(contentString)
-    function getClassType(contentString) {
+    $: classType = getClassType(content)
+    function getClassType(content) {
         // console.log('contentString', contentString)
-        if (contentString.startsWith("/")) {
+        if (content.message.startsWith("/")) {
             return 'command'
-        } else if (contentString.includes('?') && content.source === 'user') {
+        } else if (content.message.includes('?') && content.source === 'user') {
             return 'userQuestion'
         } else if (content.source === 'bot' && content.pipeline === 'ai') {
             return 'botResponse'
@@ -22,7 +22,7 @@
 
 <style>
     p {
-        white-space: pre;
+        white-space: pre-wrap;
     }
     .command {
         font-family: "Apple Chancery",serif;
