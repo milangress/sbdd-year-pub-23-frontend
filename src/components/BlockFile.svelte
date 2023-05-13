@@ -3,6 +3,9 @@
 {:else}
 <iframe src="{contentURL}" width="800px" height="500" title="test">
 </iframe>
+    <p>
+        {content.message.text}
+    </p>
 {/if}
 
 <script>

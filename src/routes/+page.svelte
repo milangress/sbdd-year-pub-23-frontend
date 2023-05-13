@@ -42,7 +42,7 @@
             const socket = new WebSocket("wss://sbdd-year-pub-23.fly.dev")
             socket.addEventListener("open", () => {
                 console.log("Opened")
-                systemMessages = ["WS Opened", ...messages]
+                systemMessages = ["Connected :) waiting for next broadcast", ...messages]
             })
             socket.addEventListener("message", (event) => {
                 console.log("Message", event.data)

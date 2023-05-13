@@ -4,6 +4,9 @@
 <video controls width="500px">
     <source src="{contentURL}">
 </video>
+    <p>
+        {content.message.text}
+    </p>
 {/if}
 
     <script>

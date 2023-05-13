@@ -31,6 +31,13 @@
         transform-origin: center left;
         opacity: 0.5;
     }
+    .userQuestion {
+        font-family: "Apple Chancery",serif;
+        font-size: 1.5em;
+        color: #fff;
+        text-shadow: 3px 3px 20px #ff99cc,
+        -2px 1px 30px #ff99cc;
+    }
     .botResponse {
         font-size: 3em;
         line-height: 1.1;

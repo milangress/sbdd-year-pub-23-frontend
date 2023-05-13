@@ -4,7 +4,10 @@
 <audio src="{contentURL}" controls>
     <a href="{contentURL}">Download audio</a>.
 </audio>
-    {/if}
+<p>
+    {content.message.text}
+</p>
+{/if}
 <script>
     import BlockImg from "./BlockImg.svelte"
 

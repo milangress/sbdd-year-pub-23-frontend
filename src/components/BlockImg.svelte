@@ -1,6 +1,7 @@
 <img src="{contentURL}" alt="{content.message.ImageAltText}">
-
-
+<p>
+    {content.message.text}
+</p>
 <style>
     img {
         max-width: 50vw;
