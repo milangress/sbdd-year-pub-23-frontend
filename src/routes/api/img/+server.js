@@ -7,7 +7,7 @@ export const config = {
 };
 
 export async function GET({ url }) {
-    const id = String(url.searchParams.get('id') ?? '0');
+    const id = String(url.searchParams.get('telegram_id') ?? '0');
 
     console.log(id)
     const getFileUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_API_KEY}/getFile?file_id=${id}`
