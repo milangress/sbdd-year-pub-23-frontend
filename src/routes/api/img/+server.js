@@ -9,9 +9,16 @@ export const config = {
 export async function GET({ url }) {
     const id = String(url.searchParams.get('id') ?? '0');
 
-    console.log(id, TELEGRAM_BOT_API_KEY)
+    console.log(id)
+    const getFileUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_API_KEY}/getFile?file_id=${id}`
+    const file = await fetch(getFileUrl).then(r => r.json()).catch(e => {
+        console.log(e)
+        return error(404)
+    })
+    console.log(file)
 
-    const asset = await fetch(`https://drive.google.com/uc?id=1z3JNX7Gc2OfpTr1yr8rn1HAwDp6lyOLe`).then(r => r.blob()).catch(e => {
+    const asset = await fetch(`https://api.telegram.org/file/${TELEGRAM_BOT_API_KEY}/${file.result.file_path}
+`).then(r => r.blob()).catch(e => {
         console.log(e)
         return error(404)
     })
