@@ -13,6 +13,8 @@
         <BlockText content={message} />
     {:else if message.message.type === 'fileFile'}
         <BlockFile content={message} />
+    {:else if message.message.type === 'fileSticker'}
+        <BlockSticker content={message} />
 
     {:else}
         <p>Unhandled JSON: {JSON.stringify(message.message)}</p>
@@ -33,6 +35,7 @@
     import BlockAudio from "../components/BlockAudio.svelte"
     import BlockText from "../components/BlockText.svelte"
     import BlockFile from "../components/BlockFile.svelte"
+    import BlockSticker from "../components/BlockSticker.svelte"
 
     let messages = []
     let systemMessages = []

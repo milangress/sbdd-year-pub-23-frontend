@@ -1,19 +1,14 @@
-{#if content.message.webPreviewUrl}
-    <BlockImg content="{content}"/>
-{:else}
-<object data="{contentURL}" width="800px" height="500" title="test">
-</object>
-    <p>
-        {content.message.text}
-    </p>
-{/if}
+<img src="{contentURL}" alt="{content.message.ImageAltText}">
+<style>
+    img {
+        max-width: 50vw;
+        height: auto;
+    }
+</style>
 
 <script>
-    import BlockImg from "./BlockImg.svelte"
-
     export let content = 'NO CONTENT :((('
-    console.log('debugIframe', content)
-    // $: contentURL = content.message.oldDriveId
+    console.log(content)
     $: contentURL = resolveURL(content)
     function resolveURL(content) {
         if (content.message['file id'] && content.message['file id'].match('drive.google.com')) {

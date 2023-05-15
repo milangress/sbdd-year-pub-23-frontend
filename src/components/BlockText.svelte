@@ -8,8 +8,7 @@
     import snarkdown from "snarkdown"
     export let content = 'NO CONTENT :((('
     console.log(content)
-    $: contentString = snarkdown(content.message.text.replaceAll('~', '~~')).replaceAll('||', '')
-    console.log('snarkdown', snarkdown(content.message.text), content.message.text.replaceAll('~', '~~'))
+    $: contentString = content.message.text ? snarkdown(content.message.text.replaceAll('~', '~~')).replaceAll('||', '') : ''
 </script>
 
 <style>

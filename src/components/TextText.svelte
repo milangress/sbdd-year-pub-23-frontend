@@ -27,14 +27,14 @@
     .command {
         font-family: "Apple Chancery",serif;
         font-size: 1em;
-        transform: scale(1.5);
+        transform: scale(1);
         transform-origin: center left;
-        opacity: 0.5;
+        color: #00ff00
     }
     .userQuestion {
         font-family: "Apple Chancery",serif;
-        font-size: 1.5em;
-        color: #fff;
+        font-size: 2em;
+        color: #ff99cc;
         text-shadow: 3px 3px 20px #ff99cc,
         -2px 1px 30px #ff99cc;
     }
@@ -42,5 +42,6 @@
         font-size: 3em;
         line-height: 1.1;
         margin-block: 0.2rem;
+        text-shadow: 3px 3px 20px #ffffff
     }
 </style>
