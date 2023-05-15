@@ -5,10 +5,11 @@
 
 
 <script>
-    import snarkdown from "snarkdown"
+    // import snarkdown from "snarkdown"
     export let content = 'NO CONTENT :((('
     console.log(content)
-    $: contentString = content.message.text ? snarkdown(content.message.text.replaceAll('~', '~~')).replaceAll('||', '') : ''
+    // $: contentString = content.message.text ? snarkdown(content.message.text.replaceAll('~', '~~')).replaceAll('||', '') : ''
+    $: contentString = content.message.text
 </script>
 
 <style>
