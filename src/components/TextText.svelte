@@ -9,7 +9,7 @@
     $: classType = getClassType(content)
     function getClassType(content) {
         // console.log('contentString', contentString)
-        if (content.message.startsWith("/")) {
+        if (content.message.startsWith("/") && content.source === 'user') {
             return 'command'
         } else if (content.message.includes('?') && content.source === 'user') {
             return 'userQuestion'
