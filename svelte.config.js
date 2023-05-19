@@ -10,6 +10,9 @@ const config = {
 		alias: {
 			'$components': 'src/components',
 		}
+	},
+	vitePlugin: {
+		inspector: true,
 	}
 };
 

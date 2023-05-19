@@ -4,7 +4,7 @@
 
 <script>
 
-    import {onMount} from "svelte"
+    import {onMount, onDestroy} from "svelte"
 
     let voices = []
     let speakTextElement
@@ -12,6 +12,9 @@
 
     onMount(() => {
         speak()
+    })
+    onDestroy(() => {
+        window.speechSynthesis.cancel();
     })
 
     function clickSpeak() {
