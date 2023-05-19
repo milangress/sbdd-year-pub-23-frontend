@@ -24,7 +24,7 @@
 <!--{"source":"bot","pipeline":"ai","message":"Menko's shoes are wild\nNaomi's gems shine like the stars\nHotness fills the air"}-->
 <hr>
 {#each systemMessages as message}
-    <p>{message}</p>
+    <SpeakText>{message}</SpeakText>
 {/each}
 
 <script>
@@ -36,6 +36,7 @@
     import BlockText from "../components/BlockText.svelte"
     import BlockFile from "../components/BlockFile.svelte"
     import BlockSticker from "../components/BlockSticker.svelte"
+    import SpeakText from "../components/SpeakText.svelte"
 
     let messages = []
     let systemMessages = []
