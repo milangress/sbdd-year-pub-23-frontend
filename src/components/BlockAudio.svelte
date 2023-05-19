@@ -4,12 +4,13 @@
 <audio src="{contentURL}" controls>
     <a href="{contentURL}">Download audio</a>.
 </audio>
-<p>
+<SpeakText>
     {content.message.text}
-</p>
+</SpeakText>
 {/if}
 <script>
     import BlockImg from "./BlockImg.svelte"
+    import SpeakText from "./SpeakText.svelte"
 
     export let content = 'NO CONTENT :((('
     $: contentURL = content.message['file id']

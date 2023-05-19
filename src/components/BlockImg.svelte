@@ -1,7 +1,7 @@
 <img src="{contentURL}" alt="{content.message.ImageAltText}">
-<p>
+<SpeakText>
     {content.message.text}
-</p>
+</SpeakText>
 <style>
     img {
         max-width: 50vw;
@@ -10,6 +10,8 @@
 </style>
 
 <script>
+    import SpeakText from "./SpeakText.svelte"
+
     export let content = 'NO CONTENT :((('
     console.log(content)
     $: contentURL = resolveURL(content)

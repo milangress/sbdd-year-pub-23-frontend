@@ -1,8 +1,10 @@
-<p class="{classType}"
-   on:click={speak}
->{contentString}</p>
+<p class="{classType}">
+   <SpeakText>{contentString}</SpeakText>
+</p>
 
 <script>
+    import SpeakText from "./SpeakText.svelte"
+
     export let content = 'NO CONTENT :((('
     //console.log(content)
     $: contentString = content.message
@@ -19,43 +21,12 @@
             return 'generic'
         }
     }
-
-    let voices = []
-
-    function speak(text) {
-        window.speechSynthesis.cancel();
-
-        text = contentString
-
-        const voice = voices.find(voice => voice.voiceURI === 'Alex');
-        console.log('voice', voice)
-
-        console.log('speak', text)
-        let utter = new SpeechSynthesisUtterance(text); // To Make The Utterance
-        utter.voice = voice;
-        utter.pitch = 0.9;
-        utter.rate = 0.7;
-        utter.volume = 1;
-        window.speechSynthesis.speak(utter);
-    }
-    function updateVoices() {
-        // add an option for each available voice that isn't already added
-        window.speechSynthesis.getVoices().forEach(voice => {
-            const isAlreadyAdded = [...voices].some(option => option.voiceURI === voice.voiceURI);
-            if (!isAlreadyAdded) {
-                voices = [...voices, voice];
-            }
-        });
-    }
-    updateVoices();
-    window.speechSynthesis.onvoiceschanged = updateVoices;
 </script>
 
 
 <style>
     p {
         white-space: pre-wrap;
-        cursor: pointer;
     }
     .command {
         font-family: "Apple Chancery",serif;

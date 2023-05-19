@@ -3,13 +3,14 @@
 {:else}
 <object data="{contentURL}" width="800px" height="500" title="test">
 </object>
-    <p>
+    <SpeakText>
         {content.message.text}
-    </p>
+    </SpeakText>
 {/if}
 
 <script>
     import BlockImg from "./BlockImg.svelte"
+    import SpeakText from "./SpeakText.svelte"
 
     export let content = 'NO CONTENT :((('
     console.log('debugIframe', content)

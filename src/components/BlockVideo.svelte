@@ -4,13 +4,14 @@
 <video controls width="500px">
     <source src="{contentURL}">
 </video>
-    <p>
+    <SpeakText>
         {content.message.text}
-    </p>
+    </SpeakText>
 {/if}
 
     <script>
     import BlockImg from "./BlockImg.svelte"
+    import SpeakText from "./SpeakText.svelte"
 
     export let content = 'NO CONTENT :((('
     console.log('debugIframe', content)
