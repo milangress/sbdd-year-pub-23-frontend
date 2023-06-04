@@ -29,23 +29,26 @@
         white-space: pre-wrap;
     }
     .command {
-        font-family: "Apple Chancery",serif;
+        font-family: "sporting-grotesque",serif;
         font-size: 1em;
         transform: scale(1);
         transform-origin: center left;
         color: #00ff00
     }
-    .userQuestion {
-        font-family: "Apple Chancery",serif;
+    .userQuestion, .generic {
+        font-family: "sporting-grotesque",serif;
         font-size: 2em;
         color: #ff99cc;
-        text-shadow: 3px 3px 20px #ff99cc,
-        -2px 1px 30px #ff99cc;
+        /*text-shadow: 3px 3px 20px #ff99cc,*/
+        /*-2px 1px 30px #ff99cc;*/
     }
     .botResponse {
-        font-size: 3em;
+        font-size: 2.5em;
         line-height: 1.1;
         margin-block: 0.2rem;
-        text-shadow: 3px 3px 20px #ffffff
+        /*text-shadow: 3px 3px 20px #ffffff;*/
+        font-family: 'romantics',serif;
+        letter-spacing: 0.15em;
+       /*filter: url(#n1);*/
     }
 </style>

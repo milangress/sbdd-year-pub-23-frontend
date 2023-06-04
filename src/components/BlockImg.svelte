@@ -1,13 +1,9 @@
+<div class="imgWrapper">
 <img src="{contentURL}" alt="{content.message.ImageAltText}">
 <SpeakText>
     {content.message.text}
 </SpeakText>
-<style>
-    img {
-        max-width: 50vw;
-        height: auto;
-    }
-</style>
+</div>
 
 <script>
     import SpeakText from "./SpeakText.svelte"
@@ -25,3 +21,17 @@
         }
     }
 </script>
+
+<style>
+    img {
+        max-height: 50vh;
+        width: auto;
+    }
+    .imgWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+</style>

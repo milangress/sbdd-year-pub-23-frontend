@@ -20,13 +20,46 @@
         font-weight: normal;
         font-style: normal;
     }
+    @font-face {
+        font-family: 'romantics';
+        src: url('/fonts/NewRomantics.woff2') format('woff2'),
+        url('/fonts/NewRomantics.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'sporting-grotesque';
+        src: url('/fonts/Sporting_Grotesque-Regular_web.woff2') format('woff2'),
+        url('/fonts/Sporting_Grotesque-Regular_web.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'sporting-grotesque';
+        src: url('/fonts/Sporting_Grotesque-Bold_web.woff2') format('woff2'),
+        url('/fonts/Sporting_Grotesque-Bold_web.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+    }
+    html, body{
+        height: 100%;
+        background-image: linear-gradient(to top in oklab, oklch(100% 0 353) 0%, 23%, oklch(58% 0.5 255) 100%);
+        background-attachment: fixed;
+    }
+    html:before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        height: 999px;
+        top: -999px;
+        background-color: oklch(58% 0.5 255);
+    }
     body {
-        font-family: oracle_gmregular_mono, monospace;
+        font-family: sporting-grotesque, monospace;
         font-size: 2rem;
-        line-height: 1;
+        line-height: 1.2;
         margin: 0;
         padding: 0;
-        background: #000;
         color: #fff;
     }
     p {

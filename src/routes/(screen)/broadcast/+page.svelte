@@ -3,7 +3,10 @@
 <SVGFilter></SVGFilter>
 
 <div class="broadcast">
-{#each messages as message (message.id)}
+{#each messages as message, index (message.id)}
+    <div animate:flip in:fade>
+    <WrapperBlock position="{index}">
+
     {#if message.contentType === 'text'}
         <TextText content={message} />
     {:else if message.message.type === 'fileImage'}
@@ -22,13 +25,16 @@
     {:else}
         <p>Unhandled JSON: {JSON.stringify(message.message)}</p>
     {/if}
+
+    </WrapperBlock>
+    </div>
 {/each}
 
 <!--{"source":"bot","pipeline":"ai","message":"Menko's shoes are wild\nNaomi's gems shine like the stars\nHotness fills the air"}-->
-<hr>
-{#each systemMessages as message}
-    <SpeakText>{message}</SpeakText>
-{/each}
+<!--<hr>-->
+<!--{#each systemMessages as message}-->
+<!--    <SpeakText>{message}</SpeakText>-->
+<!--{/each}-->
 
 </div>
 
@@ -41,10 +47,14 @@
     import BlockText from "$components/BlockText.svelte"
     import BlockFile from "$components/BlockFile.svelte"
     import BlockSticker from "$components/BlockSticker.svelte"
-    import SpeakText from "$components/SpeakText.svelte"
+    // import SpeakText from "$components/SpeakText.svelte"
     import SVGFilter from "../../../components/SVGFilter.svelte"
+    import WrapperBlock from "../../../components/WrapperBlock.svelte"
+    import { fade, fly } from 'svelte/transition';
+    import { flip } from 'svelte/animate';
 
     let messages = []
+    // eslint-disable-next-line no-unused-vars
     let systemMessages = []
 
     function connectWS() {
@@ -89,6 +99,6 @@
 
 <style>
     .broadcast {
-        filter: url(#n1);
+        /*filter: url(#n1);*/
     }
 </style>
