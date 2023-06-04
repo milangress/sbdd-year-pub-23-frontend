@@ -25,6 +25,7 @@
 <style>
     img {
         max-height: 50vh;
+        max-width: 60vw;
         width: auto;
     }
     .imgWrapper {

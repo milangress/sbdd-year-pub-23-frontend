@@ -41,10 +41,11 @@
         font-weight: bold;
         font-style: normal;
     }
+    html {
+        background: oklch(58% 0.5 255);
+    }
     html, body{
         height: 100%;
-        background-image: linear-gradient(to top in oklab, oklch(100% 0 353) 0%, 23%, oklch(58% 0.5 255) 100%);
-        background-attachment: fixed;
     }
     html:before {
         content: '';
@@ -56,11 +57,13 @@
     }
     body {
         font-family: sporting-grotesque, monospace;
-        font-size: 2rem;
+        font-size: 2vw;
         line-height: 1.2;
         margin: 0;
         padding: 0;
         color: #fff;
+        background-image: linear-gradient(to top in oklab, oklch(100% 0 353) 0%, 23%, oklch(58% 0.5 255) 100%);
+        background-attachment: fixed;
     }
     p {
         margin-block: 0.5rem;
