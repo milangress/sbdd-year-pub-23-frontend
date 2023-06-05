@@ -101,5 +101,6 @@
     .broadcast {
         /*filter: url(#n1);*/
         padding-top: 5vh;
+        width: 100%;
     }
 </style>

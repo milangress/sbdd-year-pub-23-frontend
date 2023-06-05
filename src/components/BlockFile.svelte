@@ -1,7 +1,7 @@
 {#if content.message.webPreviewUrl}
     <BlockImg content="{content}"/>
 {:else}
-<object data="{contentURL}" width="800px" height="500" title="test">
+<object data="{contentURL}" width="{window.screen.width / 2 + 'px'}" height="500" title="test">
 </object>
     <SpeakText>
         {content.message.text}
@@ -16,6 +16,7 @@
     console.log('debugIframe', content)
     // $: contentURL = content.message.oldDriveId
     $: contentURL = resolveURL(content)
+
     function resolveURL(content) {
         if (content.message['file id'] && content.message['file id'].match('drive.google.com')) {
             return content.message['file id']
