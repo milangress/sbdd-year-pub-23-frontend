@@ -31,6 +31,7 @@
 <style>
     img {
         width: 100%;
+        max-height: 100%;
         display: block;
     }
     .imgWrapper {
@@ -43,10 +44,20 @@
     }
     .imgElm {
         flex-grow: 2;
-        max-height: 80vh;
+        /*max-height: 80vh;*/
     }
     .txtElm {
         flex-grow: 1;
         max-width: 45%;
+    }
+    @media only screen and (max-width: 800px) {
+        .imgWrapper {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .txtElm {
+            max-width: 100%;
+        }
     }
 </style>
