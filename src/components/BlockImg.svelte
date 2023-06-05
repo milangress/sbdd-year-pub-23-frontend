@@ -1,8 +1,10 @@
 <div class="imgWrapper">
-<img src="{contentURL}" alt="{content.message.ImageAltText}">
-<SpeakText>
-    {content.message.text}
-</SpeakText>
+    <img src="{contentURL}" alt="{content.message.ImageAltText}">
+    {#if content.message.text}
+        <SpeakText>
+            {content.message.text}
+        </SpeakText>
+    {/if}
 </div>
 
 <script>
@@ -31,7 +33,7 @@
     .imgWrapper {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         text-align: left;
     }

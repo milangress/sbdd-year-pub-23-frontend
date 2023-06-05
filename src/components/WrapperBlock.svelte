@@ -28,5 +28,6 @@
         transition: transform 0.5s ease-in-out;
         transform: rotate(var(--rotation));
         filter: brightness(var(--brightness));
+        max-width: 85vw;
     }
 </style>
