@@ -5,7 +5,7 @@
     <source src="{contentURL}">
 </video>
     <SpeakText>
-        {content.message.text}
+        {@html content.message.text}
     </SpeakText>
 {/if}
 
