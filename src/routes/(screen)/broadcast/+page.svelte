@@ -32,9 +32,9 @@
 
 <!--{"source":"bot","pipeline":"ai","message":"Menko's shoes are wild\nNaomi's gems shine like the stars\nHotness fills the air"}-->
 <!--<hr>-->
-<!--{#each systemMessages as message}-->
-<!--    <SpeakText>{message}</SpeakText>-->
-<!--{/each}-->
+{#each systemMessages as message}
+    <WrapperBlock>{message}</WrapperBlock>
+{/each}
 
 </div>
 
@@ -63,6 +63,11 @@
             socket.addEventListener("open", () => {
                 console.log("Opened")
                 systemMessages = ["Connected :) waiting for next broadcast", ...messages]
+                // const messageObj = {
+                //     contentType: 'text',
+                //     message: 'Connected :)'
+                // }
+                // messages = [messageObj, ...messages]
             })
             socket.addEventListener("message", (event) => {
                 console.log("Message", event.data)
