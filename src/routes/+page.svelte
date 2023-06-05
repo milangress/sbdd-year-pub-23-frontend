@@ -30,6 +30,7 @@
     }
     img {
         max-height: 100vh;
+        max-width: 80vw;
         width: auto;
     }
     a {
