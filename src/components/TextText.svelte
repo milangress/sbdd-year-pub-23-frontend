@@ -1,5 +1,5 @@
 <p class="{classType}">
-   <SpeakText>{contentString}</SpeakText>
+   <SpeakText>{@html contentString}</SpeakText>
 </p>
 
 <script>

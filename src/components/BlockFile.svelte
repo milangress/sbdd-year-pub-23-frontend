@@ -4,7 +4,7 @@
 <object data="{contentURL}" width="{window.screen.width / 2 + 'px'}" height="500" title="test">
 </object>
     <SpeakText>
-        {content.message.text}
+        {@html content.message.text}
     </SpeakText>
 {/if}
 

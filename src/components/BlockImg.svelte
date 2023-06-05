@@ -5,7 +5,7 @@
     <div class="txtElm">
     {#if content.message.text}
         <SpeakText>
-            {content.message.text}
+            {@html content.message.text}
         </SpeakText>
     {/if}
     </div>
