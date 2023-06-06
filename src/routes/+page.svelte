@@ -8,12 +8,12 @@
 <div class="home">
     <a href="https://t.me/YearPubBot" >
         <WrapperBlock>
-        Open Chat
+        Open Chat <br> (in telegram)
         </WrapperBlock>
     </a>
     <a href="/broadcast">
     <WrapperBlock>
-    Watch Broadcast
+    Watch live broadcast
     </WrapperBlock>
     </a>
 
@@ -35,7 +35,7 @@
     }
     a {
         transition: all 0.2s ease-in-out;
-        font-size: 2em;
+        font-size: 3em;
         text-decoration: none;
     }
     a:hover {

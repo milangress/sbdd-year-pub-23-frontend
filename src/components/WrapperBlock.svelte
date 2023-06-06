@@ -11,7 +11,7 @@
 
     export let position = 0
     const brightness = `${Math.random() / 5 + 1}`
-    const seed = Math.random() * 1000000;
+    const seed = Math.round(Math.random() * 100000000)
 
     $: updateStyle = `--rotation: ${Math.random(position) * 4 - 2}deg; --brightness: ${brightness}`
     $: cloudStyle = `--clouds: url(#clouds${seed}); --clouds-little: url(#clouds-little${seed})`

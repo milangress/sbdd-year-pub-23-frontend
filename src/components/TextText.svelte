@@ -43,12 +43,14 @@
         /*-2px 1px 30px #ff99cc;*/
     }
     .botResponse {
-        font-size: 2.5em;
+        font-size: 2em;
         line-height: 1.1;
         margin-block: 0.2rem;
         /*text-shadow: 3px 3px 20px #ffffff;*/
         font-family: 'romantics',serif;
         letter-spacing: 0.15em;
        /*filter: url(#n1);*/
+       transform: scaleY(1.5);
+       padding-block: 1em;
     }
 </style>

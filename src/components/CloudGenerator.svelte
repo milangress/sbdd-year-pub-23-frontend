@@ -1,12 +1,22 @@
 <svg class="fixed inset-0 transform -translate-x-full">
     <defs>
         <filter id="{cloudID}">
-            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="180" seed="{seed}" />
-            <feDisplacementMap in="SourceGraphic" scale="{scale}" />
+            <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency=".01"
+                    numOctaves="180"
+                    result="turbulence"
+                    seed="{seed}" />
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="{scale}" />
         </filter>
         <filter id="{cloudLittleID}">
-            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="180" seed="{seed}"/>
-            <feDisplacementMap in="SourceGraphic" scale="5" />
+            <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency=".01"
+                    numOctaves="180"
+                    result="turbulence"
+                    seed="{seed}"/>
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="15" />
         </filter>
     </defs>
 </svg>
