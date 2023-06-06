@@ -13,7 +13,7 @@
     const brightness = `${Math.random() / 5 + 1}`
     const seed = Math.random() * 1000000;
 
-    $: updateStyle = `--rotation: ${Math.random(position) * 2 - 1}deg; --brightness: ${brightness}`
+    $: updateStyle = `--rotation: ${Math.random(position) * 4 - 2}deg; --brightness: ${brightness}`
     $: cloudStyle = `--clouds: url(#clouds${seed}); --clouds-little: url(#clouds-little${seed})`
     $: style = updateStyle + '; ' + cloudStyle
 
@@ -31,7 +31,7 @@
         transition: transform 0.5s ease-in-out;
         transform: rotate(var(--rotation));
         max-width: 85vw;
-        contain: style;
+        contain: layout;
         margin-block: -1vw;
 
     }
