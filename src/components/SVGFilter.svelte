@@ -40,8 +40,20 @@
 
 
         </filter>
+        <filter id="clouds">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="180" seed="{seed}" />
+            <feDisplacementMap in="SourceGraphic" scale="180" />
+        </filter>
+        <filter id="clouds-little">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="180" seed="{seed}"/>
+            <feDisplacementMap in="SourceGraphic" scale="5" />
+        </filter>
     </defs>
 </svg>
+
+<script>
+    let seed = Math.random() * 1000000;
+</script>
 
 <style>
     svg {

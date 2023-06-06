@@ -1,0 +1,29 @@
+<svg class="fixed inset-0 transform -translate-x-full">
+    <defs>
+        <filter id="{cloudID}">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="180" seed="{seed}" />
+            <feDisplacementMap in="SourceGraphic" scale="{scale}" />
+        </filter>
+        <filter id="{cloudLittleID}">
+            <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="180" seed="{seed}"/>
+            <feDisplacementMap in="SourceGraphic" scale="5" />
+        </filter>
+    </defs>
+</svg>
+
+<script>
+    export let seed = Math.round(Math.random() * 1000000);
+    let scale = Math.random() * 160 + 20;
+    $: cloudID = 'clouds' + seed
+    $: cloudLittleID = 'clouds-little' + seed
+</script>
+
+<style>
+    svg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: -1;
+    }
+</style>
