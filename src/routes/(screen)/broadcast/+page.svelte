@@ -62,7 +62,7 @@
             const socket = new WebSocket("wss://sbdd-year-pub-23.fly.dev")
             socket.addEventListener("open", () => {
                 console.log("Opened")
-                systemMessages = ["Connected :) waiting for next broadcast", ...messages]
+                systemMessages = ["Connected :) waiting for next broadcast", ...systemMessages]
                 // const messageObj = {
                 //     contentType: 'text',
                 //     message: 'Connected :)'
@@ -85,13 +85,13 @@
             })
             socket.addEventListener("error", (event) => {
                 console.log("WebSocket error: ", event);
-                systemMessages = ["WebSocket error:", JSON.stringify(event), ...messages]
+                systemMessages = ["WebSocket error:", JSON.stringify(event), ...systemMessages]
             });
             socket.addEventListener("close", (event) => {
                 console.log("The connection has been closed successfully.");
-                systemMessages = ["CLOSED", JSON.stringify(event), ...messages]
+                systemMessages = ["CLOSED", JSON.stringify(event), ...systemMessages]
 
-                systemMessages = ['Socket is closed. Reconnect will be attempted in 5 second.', JSON.stringify(event), ...messages]
+                systemMessages = ['Socket is closed. Reconnect will be attempted in 5 second.', JSON.stringify(event), ...systemMessages]
                 console.log('Socket is closed. Reconnect will be attempted in 5 second.', event.reason);
                 setTimeout(function() {
                     connectWS();
