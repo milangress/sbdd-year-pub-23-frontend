@@ -16,7 +16,7 @@
                     numOctaves="180"
                     result="turbulence"
                     seed="{seed}"/>
-            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="15" />
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="5" />
         </filter>
     </defs>
 </svg>

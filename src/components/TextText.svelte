@@ -50,7 +50,7 @@
         font-family: 'romantics',serif;
         letter-spacing: 0.15em;
        /*filter: url(#n1);*/
-       transform: scaleY(1.5);
-       padding-block: 1em;
+       /*transform: scaleY(1.5);*/
+       /*padding-block: 1em;*/
     }
 </style>

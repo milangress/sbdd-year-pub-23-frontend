@@ -105,7 +105,7 @@
         document.addEventListener(
             "keydown",
             (e) => {
-                if (e.key === "f") {
+                if (e.key === " " || e.code === "Space") {
                     toggleFullScreen();
                 }
             },
