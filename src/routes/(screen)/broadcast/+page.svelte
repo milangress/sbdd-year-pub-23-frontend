@@ -50,7 +50,7 @@
     // import SpeakText from "$components/SpeakText.svelte"
     import SVGFilter from "../../../components/SVGFilter.svelte"
     import WrapperBlock from "../../../components/WrapperBlock.svelte"
-    import { fade, fly } from 'svelte/transition';
+    import { fade } from 'svelte/transition';
     import { flip } from 'svelte/animate';
 
     let messages = []
