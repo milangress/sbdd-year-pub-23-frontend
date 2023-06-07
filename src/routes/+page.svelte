@@ -6,9 +6,9 @@
 <SVGFilter></SVGFilter>
 
 <div class="home">
-    <a href="https://t.me/YearPubBot" >
+    <a href="https://t.me/YearPubBot" class="openChat">
         <WrapperBlock>
-        Open Chat <br> (in telegram)
+            Open Chat <br> <span>(in telegram)</span>
         </WrapperBlock>
     </a>
     <a href="/broadcast">
@@ -35,10 +35,17 @@
     }
     a {
         transition: all 0.2s ease-in-out;
-        font-size: 3em;
+        font-size: 2em;
         text-decoration: none;
     }
     a:hover {
         transform: scale(1.1);
+    }
+    .openChat {
+        margin-block: 1em;
+        font-size: 4em;
+    }
+    .openChat span {
+        font-size: 0.5em;
     }
 </style>

@@ -23,6 +23,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"snarkdown": "^2.0.0"
+		"snarkdown": "^2.0.0",
+		"vercel": "^30.2.1"
 	}
 }
