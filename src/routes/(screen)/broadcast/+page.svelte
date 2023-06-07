@@ -47,14 +47,12 @@
     import BlockText from "$components/BlockText.svelte"
     import BlockFile from "$components/BlockFile.svelte"
     import BlockSticker from "$components/BlockSticker.svelte"
-    // import SpeakText from "$components/SpeakText.svelte"
     import SVGFilter from "../../../components/SVGFilter.svelte"
     import WrapperBlock from "../../../components/WrapperBlock.svelte"
     import { fade } from 'svelte/transition';
     import { flip } from 'svelte/animate';
 
     let messages = []
-    // eslint-disable-next-line no-unused-vars
     let systemMessages = []
 
     function connectWS() {
