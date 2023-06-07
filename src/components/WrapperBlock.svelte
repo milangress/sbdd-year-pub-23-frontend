@@ -38,7 +38,7 @@
     }
     .block-clouds {
         box-shadow: inset 1.4em 1.4em 1.4em rgba(255, 255, 255, .5), inset -1.4em -1.4em 1.4em rgba(0, 0, 0, .2), 3px 3px 20px #ffffff;;
-        background: #b2b2b2;
+        background: rgba(206, 206, 206, 0.7);
         border-radius: 10vw;
 
         /*filter: brightness(var(--brightness));*/
