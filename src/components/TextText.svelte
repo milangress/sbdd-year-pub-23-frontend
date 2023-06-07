@@ -38,7 +38,7 @@
     .userQuestion, .generic {
         font-family: "sporting-grotesque",serif;
         font-size: 2em;
-        color: #ff99cc;
+        color: #f30078;
         /*text-shadow: 3px 3px 20px #ff99cc,*/
         /*-2px 1px 30px #ff99cc;*/
     }

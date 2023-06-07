@@ -34,6 +34,7 @@
         contain: layout;
         margin-block: -1vw;
 
+
     }
     .block-clouds {
         box-shadow: inset 1.4em 1.4em 1.4em rgba(255, 255, 255, .5), inset -1.4em -1.4em 1.4em rgba(0, 0, 0, .2), 3px 3px 20px #ffffff;;
@@ -54,5 +55,6 @@
         padding: 5vw 10vw;
         text-shadow: 0 0.03em 0 rgba(255, 255, 255, .8), 0 -0.035em 0 rgba(0, 0, 0, .3);
         filter: var(--clouds-little);
+        contain: paint;
     }
 </style>

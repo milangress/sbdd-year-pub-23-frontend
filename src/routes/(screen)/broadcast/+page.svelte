@@ -126,5 +126,7 @@
         /*filter: url(#n1);*/
         padding-top: 5vh;
         width: 100%;
+        /*mix-blend-mode: hard-light;*/
+
     }
 </style>
