@@ -3,7 +3,7 @@
 <SVGFilter></SVGFilter>
 
 <div class="broadcast">
-{#each messages as message, index (message.id)}
+{#each messagesDisplayed as message, index (message.id)}
     <div animate:flip in:fade>
     <WrapperBlock position="{index}">
 
@@ -53,6 +53,7 @@
     import { flip } from 'svelte/animate';
 
     let messages = []
+    $: messagesDisplayed = messages.slice(0, 100)
     let systemMessages = []
 
     function connectWS() {
