@@ -32,7 +32,9 @@
         utter.pitch = 0.9;
         utter.rate = 0.7;
         utter.volume = 1;
-        window.speechSynthesis.speak(utter);
+        if (text.length > 0 && voice) {
+            window.speechSynthesis.speak(utter);
+        }
     }
     function updateVoices() {
         // add an option for each available voice that isn't already added
