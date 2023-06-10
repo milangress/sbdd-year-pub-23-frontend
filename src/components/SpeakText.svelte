@@ -11,7 +11,7 @@
 
 
     onMount(() => {
-        // speak()
+        speak()
     })
     onDestroy(() => {
         window.speechSynthesis.cancel();
